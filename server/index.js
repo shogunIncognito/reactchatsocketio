@@ -8,6 +8,7 @@ const app = express()
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const server = http.createServer(app)
 const io = new SocketServer(server)
+const PORT = process.env.PORT || 3000
 
 app.use(express.static(join(__dirname, '../frontend/dist')));
 
@@ -28,6 +29,6 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(3000, () => {
+server.listen(PORT, () => {
   console.log('listening on *:3000')
 })
