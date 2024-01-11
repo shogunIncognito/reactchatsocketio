@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.messages-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.messages-container::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.messages-container::-webkit-scrollbar-button:increment,.messages-container::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.messages-container::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
